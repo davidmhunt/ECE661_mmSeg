@@ -29,3 +29,9 @@ git clone https://github.com/davidmhunt/ECE661_mmSeg.git --recurse-submodules
 cd ECE661_mmseg
 poetry install
 ```
+
+Note, if you get an error stating: that poetry failed to unlock the collection, enter the following command in the terminal or add it to your .bashrc file
+
+```
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+```
