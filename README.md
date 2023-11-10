@@ -19,7 +19,7 @@ curl -sSL https://install.python-poetry.org | python3 -
 1. If conda isn't already installed, follow the [Conda Install Instructions](https://conda.io/projects/conda/en/stable/user-guide/install/index.html) to install conda
 2. Once conda is installed, create a new conda environment with the correct version of python
 ```
-conda create -n ECE661_mmseg python=3.8
+conda create -n ECE661_mmseg python=3.10
 ```
 
 ## Installation
