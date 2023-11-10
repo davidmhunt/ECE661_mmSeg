@@ -1,0 +1,3 @@
+[submodule "submodules/mmsegmentation"]
+	path = submodules/mmsegmentation
+	url = https://github.com/davidmhunt/mmsegmentation.git
