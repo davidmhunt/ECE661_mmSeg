@@ -41,6 +41,9 @@ onnxruntime-gpu = {version="~1.15.1", optional=true}
 tensorrt = {version="~8.5.3.1", optional=true}  # NOTE: to appropriately use, we need to download the same version tar package manually
 nvidia-cudnn-cu11 = {version="8.9.4.25", optional=true}
 matplotlib = "^3.8.1"
+ftfy = "^6.1.1"
+regex = "^2023.10.3"
+yapf= "==0.40.1"
 
 
 [tool.poetry.dev-dependencies]

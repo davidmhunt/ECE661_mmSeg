@@ -1073,6 +1073,20 @@ files = [
 ]
 
 [[package]]
+name = "ftfy"
+version = "6.1.1"
+description = "Fixes mojibake and other problems with Unicode, after the fact"
+optional = false
+python-versions = ">=3.7,<4"
+files = [
+    {file = "ftfy-6.1.1-py3-none-any.whl", hash = "sha256:0ffd33fce16b54cccaec78d6ec73d95ad370e5df5a25255c8966a6147bd667ca"},
+    {file = "ftfy-6.1.1.tar.gz", hash = "sha256:bfc2019f84fcd851419152320a6375604a0f1459c281b5b199b2cd0d2e727f8f"},
+]
+
+[package.dependencies]
+wcwidth = ">=0.2.5"
+
+[[package]]
 name = "gdown"
 version = "4.7.1"
 description = "Google Drive direct download of big files."
@@ -2273,7 +2287,7 @@ prettytable = "*"
 scipy = "*"
 
 [package.extras]
-all = ["cityscapesscripts", "clip", "codecov", "diffusers", "einops (==0.3.0)", "flake8", "ftfy", "imageio (==2.9.0)", "imageio-ffmpeg (==0.4.2)", "interrogate", "invisible-watermark", "kornia (==0.6)", "latent-diffusion", "matplotlib", "nibabel", "numpy", "omegaconf (==2.1.1)", "packaging", "prettytable", "pudb (==2019.2)", "pytest", "pytorch-lightning (==1.4.2)", "regex", "scipy", "streamlit (>=0.73.1)", "taming-transformers", "test-tube (>=0.7.5)", "timm", "torch-fidelity (==0.3.0)", "torchmetrics (==0.6.0)", "transformers (==4.19.2)", "xdoctest (>=0.10.0)", "yapf"]
+all = ["cityscapesscripts", "clip", "codecov", "diffusers", "einops (==0.3.0)", "flake8", "ftfy", "ftfy", "imageio (==2.9.0)", "imageio-ffmpeg (==0.4.2)", "interrogate", "invisible-watermark", "kornia (==0.6)", "latent-diffusion", "matplotlib", "nibabel", "numpy", "omegaconf (==2.1.1)", "packaging", "prettytable", "pudb (==2019.2)", "pytest", "pytorch-lightning (==1.4.2)", "regex", "regex", "scipy", "streamlit (>=0.73.1)", "taming-transformers", "test-tube (>=0.7.5)", "timm", "torch-fidelity (==0.3.0)", "torchmetrics (==0.6.0)", "transformers (==4.19.2)", "xdoctest (>=0.10.0)", "yapf"]
 mim = ["mmcv (>=2.0.0rc4,<2.2.0)", "mmengine (>=0.5.0,<1.0.0)"]
 multimodal = ["ftfy", "regex"]
 optional = ["cityscapesscripts", "clip", "diffusers", "einops (==0.3.0)", "imageio (==2.9.0)", "imageio-ffmpeg (==0.4.2)", "invisible-watermark", "kornia (==0.6)", "latent-diffusion", "nibabel", "omegaconf (==2.1.1)", "pudb (==2019.2)", "pytorch-lightning (==1.4.2)", "streamlit (>=0.73.1)", "taming-transformers", "test-tube (>=0.7.5)", "timm", "torch-fidelity (==0.3.0)", "torchmetrics (==0.6.0)", "transformers (==4.19.2)"]
@@ -4702,13 +4716,13 @@ files = [
 
 [[package]]
 name = "yapf"
-version = "0.40.2"
-description = "A formatter for Python code"
+version = "0.40.1"
+description = "A formatter for Python code."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "yapf-0.40.2-py3-none-any.whl", hash = "sha256:adc8b5dd02c0143108878c499284205adb258aad6db6634e5b869e7ee2bd548b"},
-    {file = "yapf-0.40.2.tar.gz", hash = "sha256:4dab8a5ed7134e26d57c1647c7483afb3f136878b579062b786c9ba16b94637b"},
+    {file = "yapf-0.40.1-py3-none-any.whl", hash = "sha256:b8bfc1f280949153e795181768ca14ef43d7312629a06c43e7abd279323af313"},
+    {file = "yapf-0.40.1.tar.gz", hash = "sha256:958587eb5c8ec6c860119a9c25d02addf30a44f75aa152a4220d30e56a98037c"},
 ]
 
 [package.dependencies]
@@ -4734,4 +4748,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.10"
-content-hash = "b0bb2d40a6072b61a63d22a0a25f1ce8ff2cd6d709dd01997827a388a88d386f"
+content-hash = "9408930a91e863f39639074a09df03aa58f1ff10af988d0f05d8bf15100144bb"
