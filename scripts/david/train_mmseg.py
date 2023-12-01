@@ -53,7 +53,7 @@ configs = [
 ]
 
 #initialize the configuration file
-config_idx = 3
+config_idx = 5
 config_folder = "ece661"
 config_name = configs[config_idx]["config_name"]
 cfg_path = os.path.join(mmseg_path,"configs",config_folder,config_name)
