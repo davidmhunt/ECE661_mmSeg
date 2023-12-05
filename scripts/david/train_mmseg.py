@@ -53,26 +53,36 @@ configs = [
 ]
 
 #initialize the configuration file
-config_idx = 5
+load_from_checkpoint = True
+config_idx = 0
 config_folder = "ece661"
 config_name = configs[config_idx]["config_name"]
 cfg_path = os.path.join(mmseg_path,"configs",config_folder,config_name)
 cfg = Config.fromfile(cfg_path)
 
 #set the working directory
-cfg.work_dir = os.path.join(mmseg_path,'work_dirs',config_name)
+if load_from_checkpoint == False:
+    cfg.work_dir = os.path.join(mmseg_path,'work_dirs',"{}_no_pretrained".format(config_name))
+    cfg.load_from = None
+else:
+    cfg.work_dir = os.path.join(mmseg_path,'work_dirs',config_name)
 
-#set the checkpoint to load from
-checkpoint_name = configs[config_idx]["checkpoint"]
-checkpoint_path = os.path.join(mmseg_path,'checkpoints',checkpoint_name)
-cfg.load_from = checkpoint_path
+    #set the checkpoint to load from
+    checkpoint_name = configs[config_idx]["checkpoint"]
+    checkpoint_path = os.path.join(mmseg_path,'checkpoints',checkpoint_name)
+    cfg.load_from = checkpoint_path
 
 #increase the batch size for the training
 #NOTE: Config 0 has issue when we change the batch size for some reason
 cfg.train_dataloader.batch_size = 16
 
+#specify the evaluation metrics to use
+cfg.val_evaluator.iou_metrics= ['mIoU', 'mDice', 'mFscore']
+cfg.test_evaluator.iou_metrics = ['mIoU', 'mDice', 'mFscore']
+
 #set the number of training iterations
 cfg.train_cfg.max_iters = 8000
+cfg.train_cfg.val_interval = 1000
 
 #initialize the runner
 runner = Runner.from_cfg(cfg)
