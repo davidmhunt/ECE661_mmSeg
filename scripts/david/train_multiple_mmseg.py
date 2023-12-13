@@ -94,6 +94,12 @@ def train_mmseg(config_idx,load_from_checkpoint,configs):
 for i in range(6):
     train_mmseg(
         config_idx=i,
-        load_from_checkpoint=load_from_checkpoint,
+        load_from_checkpoint=True,
+        configs = configs
+    )
+
+    train_mmseg(
+        config_idx=i,
+        load_from_checkpoint=False,
         configs = configs
     )

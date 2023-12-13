@@ -54,7 +54,7 @@ configs = [
 
 #initialize the configuration file
 load_from_checkpoint = False
-config_idx = 1
+config_idx = 0
 config_folder = "ece661"
 config_name = configs[config_idx]["config_name"]
 cfg_path = os.path.join(mmseg_path,"configs",config_folder,config_name)
@@ -83,6 +83,9 @@ cfg.test_evaluator.iou_metrics = ['mIoU', 'mDice', 'mFscore']
 #set the number of training iterations
 cfg.train_cfg.max_iters = 8000
 cfg.train_cfg.val_interval = 1000
+
+#set the logging interval
+cfg.default_hooks.checkpoint.interval = 1000
 
 #initialize the runner
 runner = Runner.from_cfg(cfg)
