@@ -49,6 +49,10 @@ configs = [
     {
         "config_name":"unet-s5-d16_pspnet_4xb4-ce-1.0-dice-3.0-40k_DME-64x64.py",
         "checkpoint":"pspnet_unet_s5-d16_ce-1.0-dice-3.0_64x64_40k_drive_20211210_201821-22b3e3ba.pth"
+    },
+    { #STARE Dataset Configs
+        "config_name":"unet-s5-d16_deeplabv3_4xb4-40k_DME_STARE-128x128.py",
+        "checkpoint":"deeplabv3_unet_s5-d16_128x128_40k_stare_20201226_094047-93dcb93c.pth"
     }
 ]
 
